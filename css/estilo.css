@@ -181,6 +181,10 @@ body > main > header h2 {
     margin: 0;
 }
 
+body > main > header > nav .nav-wrapper {
+    display: none;
+}
+
 /* PRODUCTS */
 body > main > .products-list .col-filters {
     display: none;
