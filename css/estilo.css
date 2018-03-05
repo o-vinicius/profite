@@ -454,7 +454,7 @@ footer {
     body > main > .products-list .col-products .product {
         width: calc(33.33% - 20px);
         margin-left: 20px;
-        margin-left: 0;
+        margin-right: 0;
     }
     body > main > .products-list .col-products .product:nth-of-type(3n) {
         margin-right: 0;
