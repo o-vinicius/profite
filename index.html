@@ -1,0 +1,457 @@
+<!doctype html>
+<html lang="pt-br">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, minimum-scale=1.0, maximum-scale=1.0, user-scalable=no">
+    <meta name="apple-mobile-web-app-capable" content="yes">
+    <meta name="mobile-web-app-capable" content="yes">
+    <meta name="description" content="" />
+    <link rel="shortcut icon" href="favicon.ico">
+    <link href="https://fonts.googleapis.com/css?family=Open+Sans" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css?family=Libre+Baskerville:400,400i,700" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css?family=Ubuntu+Mono" rel="stylesheet">
+    <link href="css/estilo.css" type="text/css" rel="stylesheet" media="all" />
+    <title>Implantação de E-Commerce, SEO e Evolução | Agência Profite</title>
+    <meta property="og:image" content="" />
+    <script src="https://code.jquery.com/jquery-3.3.1.min.js"></script>
+</head>
+
+<body>
+    <header>
+        <div class="container">
+            <h1 class="logo">
+                <img
+                     src="images/profite-logo-1x.png"
+                     alt="Bata Bordada"
+                     srcset="images/profite-logo-2x.png 2x,
+                             images/profite-logo-1x.png 1x"
+                />
+            </h1>
+            <div class="cart-infos">
+                <a class="cart-contents" href="#"><i></i><span class="cart-count">7</span></a>
+            </div>
+        </div>
+    </header>
+    <main>
+        <header class="container">
+            <h2 class="shop-title">Vestidos</h2>
+            <nav>
+                <div class="nav-menu">
+                    <a href="#">Filtrar</a>
+                    <a href="#">Ordenar</a>
+                </div>
+                <div class="nav-wrapper nav-filter">
+                    <a href="#" class="btn">Filtrar</a>
+                    <div class="filter-wrapper">
+                        <div class="filter-type filter-color">
+                            <h3>Cores</h3>
+                            <div class="filter-container filter-checkbox">
+                                <label class="checkbox"><input type="checkbox" name="checkbox">Amarelo</label>
+                                <label class="checkbox"><input type="checkbox" name="checkbox">Azul</label>
+                                <label class="checkbox"><input type="checkbox" name="checkbox">Branco</label>
+                                <label class="checkbox"><input type="checkbox" name="checkbox">Cinza</label>
+                                <label class="checkbox"><input type="checkbox" name="checkbox">Laranja</label>
+                                <label class="checkbox"><input type="checkbox" name="checkbox">Verde</label>
+                                <label class="checkbox"><input type="checkbox" name="checkbox">Vermelho</label>
+                                <label class="checkbox"><input type="checkbox" name="checkbox">Preto</label>
+                                <label class="checkbox"><input type="checkbox" name="checkbox">Rosa</label>
+                                <label class="checkbox"><input type="checkbox" name="checkbox">Vinho</label>
+                            </div>
+                        </div>
+                        <div class="filter-type filter-size">
+                            <h3>Faixa de preço</h3>
+                            <div class="filter-container filter-tag">
+                                <ul class="tag-list">
+                                    <li class="tag-item"><a href="#">P</a></li>
+                                    <li class="tag-item"><a href="#">M</a></li>
+                                    <li class="tag-item"><a href="#">G</a></li>
+                                    <li class="tag-item"><a href="#">GG</a></li>
+                                    <li class="tag-item"><a href="#">U</a></li>
+                                    <li class="tag-item"><a href="#">36</a></li>
+                                    <li class="tag-item"><a href="#">38</a></li>
+                                    <li class="tag-item"><a href="#">40</a></li>
+                                    <li class="tag-item"><a href="#">42</a></li>
+                                    <li class="tag-item"><a href="#">44</a></li>
+                                    <li class="tag-item"><a href="#">46</a></li>
+                                </ul>
+                            </div>
+                        </div>
+                        <div class="filter-type filter-price">
+                            <h3>Faixa de preço</h3>
+                            <div class="filter-container filter-checkbox">
+                                <label class="checkbox"><input type="checkbox" name="checkbox">de R$ 0 até R$ 50</label>
+                                <label class="checkbox"><input type="checkbox" name="checkbox">de R$ 51 até R$ 150</label>
+                                <label class="checkbox"><input type="checkbox" name="checkbox">de R$ 151 até 300</label>
+                                <label class="checkbox"><input type="checkbox" name="checkbox">de R$ 301 até 500</label>
+                                <label class="checkbox"><input type="checkbox" name="checkbox">a partir de R$ 501</label>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="nav-wrapper nav-sort">
+                    <a href="#" class="btn">Ordenar</a>
+                    <div class="filter-wrapper">
+                        <div class="filter-type">
+                            <div class="filter-container filter-select">
+                                <a href="javascript:void();">Ordenar por: <i class="fas fa-angle-down"></i></a>
+                                <ul>
+                                    <li><a href="#">Mais recentes</a></li>
+                                    <li><a href="#">Menor preço</a></li>
+                                    <li><a href="#">Maior preço</a></li>
+                                </ul>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </nav>
+        </header>
+        <section class="container products-list">
+            <div class="col-filters">
+                <div class="filter-type filter-color">
+                    <h3>Cores</h3>
+                    <div class="filter-container filter-checkbox">
+                        <label class="checkbox"><input type="checkbox" name="checkbox">Amarelo</label>
+                        <label class="checkbox"><input type="checkbox" name="checkbox">Azul</label>
+                        <label class="checkbox"><input type="checkbox" name="checkbox">Branco</label>
+                        <label class="checkbox"><input type="checkbox" name="checkbox">Cinza</label>
+                        <label class="checkbox"><input type="checkbox" name="checkbox">Laranja</label>
+                        <div class="filter-container-hidden">
+                            <label class="checkbox"><input type="checkbox" name="checkbox">Verde</label>
+                            <label class="checkbox"><input type="checkbox" name="checkbox">Vermelho</label>
+                            <label class="checkbox"><input type="checkbox" name="checkbox">Preto</label>
+                            <label class="checkbox"><input type="checkbox" name="checkbox">Rosa</label>
+                            <label class="checkbox"><input type="checkbox" name="checkbox">Vinho</label>
+                        </div>
+                        <a href="javascript:void()" class="filter-btn-show">Ver todas as cores <i class="fas fa-angle-down"></i></a>
+                    </div>
+                </div>
+                <div class="filter-type filter-size">
+                    <h3>Faixa de preço</h3>
+                    <div class="filter-container filter-tag">
+                        <ul class="tag-list">
+                            <li class="tag-item"><a href="#">P</a></li>
+                            <li class="tag-item"><a href="#">M</a></li>
+                            <li class="tag-item"><a href="#">G</a></li>
+                            <li class="tag-item"><a href="#">GG</a></li>
+                            <li class="tag-item"><a href="#">U</a></li>
+                            <li class="tag-item"><a href="#">36</a></li>
+                            <li class="tag-item"><a href="#">38</a></li>
+                            <li class="tag-item"><a href="#">40</a></li>
+                            <li class="tag-item"><a href="#">42</a></li>
+                            <li class="tag-item"><a href="#">44</a></li>
+                            <li class="tag-item"><a href="#">46</a></li>
+                        </ul>
+                    </div>
+                </div>
+                <div class="filter-type filter-price">
+                    <h3>Faixa de preço</h3>
+                    <div class="filter-container filter-checkbox">
+                        <label class="checkbox"><input type="checkbox" name="checkbox"><i></i>de R$ 0 até R$ 50</label>
+                        <label class="checkbox"><input type="checkbox" name="checkbox"><i></i>de R$ 51 até R$ 150</label>
+                        <label class="checkbox"><input type="checkbox" name="checkbox"><i></i>de R$ 151 até 300</label>
+                        <label class="checkbox"><input type="checkbox" name="checkbox"><i></i>de R$ 301 até 500</label>
+                        <label class="checkbox"><input type="checkbox" name="checkbox"><i></i>a partir de R$ 501</label>
+                    </div>
+                </div>
+            </div>
+            <div class="col-products">
+                <div class="product">
+                    <a href="#" class="product-link"></a>
+                    <div class="product-image">
+                        <img
+                             src="images/shop-img-1x-09.jpg"
+                             alt="Bata Bordada"
+                             srcset="images/shop-img-2x-09.jpg 2x,
+                                     images/shop-img-1x-09.jpg 1x"
+                             class="show"
+                        />
+                        <div class="product-image-hover">
+                            <img
+                                 src="images/shop-img-1x-09-hover.jpg"
+                                 alt="Bata Bordada"
+                                 srcset="images/shop-img-2x-09-hover.jpg 2x,
+                                         images/shop-img-1x-09-hover.jpg 1x"
+                                 class="hide"
+                            />
+                        </div>
+                    </div>
+                    <h3>Bata Bordada</h3>
+                    <div class="product-infos">
+                        <p class="valor">
+                            <span class="price"><span class="amount">R$ 398</span></span>
+                            <span class="pay">até 5x de R$30,00</span>
+                        </p>
+                        <i></i>
+                    </div>
+                </div>
+                <div class="product">
+                    <a href="#" class="product-link"></a>
+                    <div class="product-image">
+                        <img
+                             src="images/shop-img-1x-08.jpg"
+                             alt="Bata Bordada"
+                             srcset="images/shop-img-2x-08.jpg 2x,
+                                     images/shop-img-1x-08.jpg 1x"
+                             class="show"
+                        />
+                        <div class="product-image-hover">
+                            <img
+                                 src="images/shop-img-1x-08-hover.jpg"
+                                 alt="Bata Bordada"
+                                 srcset="images/shop-img-2x-08-hover.jpg 2x,
+                                         images/shop-img-1x-08-hover.jpg 1x"
+                                 class="hide"
+                            />
+                        </div>
+                    </div>
+                    <h3>Chapéu de praia com fivela</h3>
+                    <div class="product-infos">
+                        <p class="valor">
+                            <span class="price"><del><span class="amount">R$ 398</span></del><ins><span class="amount">R$ 398</span></ins></span>
+                            <span class="pay">até 5x de R$30,00</span>
+                        </p>
+                        <i></i>
+                    </div>
+                </div>
+                <div class="product">
+                    <a href="#" class="product-link"></a>
+                    <div class="product-image">
+                        <img
+                             src="images/shop-img-1x-07.jpg"
+                             alt="Bata Bordada"
+                             srcset="images/shop-img-2x-07.jpg 2x,
+                                     images/shop-img-1x-07.jpg 1x"
+                             class="show"
+                        />
+                        <div class="product-image-hover">
+                            <img
+                                 src="images/shop-img-1x-07-hover.jpg"
+                                 alt="Bata Bordada"
+                                 srcset="images/shop-img-2x-07-hover.jpg 2x,
+                                         images/shop-img-1x-07-hover.jpg 1x"
+                                 class="hide"
+                            />
+                        </div>
+                    </div>
+                    <h3>Vestido texturizado</h3>
+                    <div class="product-infos">
+                        <p class="valor">
+                            <span class="price"><span class="amount">R$ 398</span></span>
+                            <span class="pay">até 5x de R$30,00</span>
+                        </p>
+                        <i></i>
+                    </div>
+                </div>
+                <div class="product">
+                    <a href="#" class="product-link"></a>
+                    <div class="product-image">
+                        <img
+                             src="images/shop-img-1x-06.jpg"
+                             alt="Bata Bordada"
+                             srcset="images/shop-img-2x-06.jpg 2x,
+                                     images/shop-img-1x-06.jpg 1x"
+                             class="show"
+                        />
+                        <div class="product-image-hover">
+                            <img
+                                 src="images/shop-img-1x-06-hover.jpg"
+                                 alt="Bata Bordada"
+                                 srcset="images/shop-img-2x-06-hover.jpg 2x,
+                                         images/shop-img-1x-06-hover.jpg 1x"
+                                 class="hide"
+                            />
+                        </div>
+                    </div>
+                    <h3>Bata Bordada</h3>
+                    <div class="product-infos">
+                        <p class="valor">
+                            <span class="price"><del><span class="amount">R$ 398</span></del><ins><span class="amount">R$ 398</span></ins></span>
+                            <span class="pay">até 5x de R$30,00</span>
+                        </p>
+                        <i></i>
+                    </div>
+                </div>
+                <div class="product">
+                    <a href="#" class="product-link"></a>
+                    <div class="product-image">
+                        <img
+                             src="images/shop-img-1x-05.jpg"
+                             alt="Bata Bordada"
+                             srcset="images/shop-img-2x-05.jpg 2x,
+                                     images/shop-img-1x-05.jpg 1x"
+                             class="show"
+                        />
+                        <div class="product-image-hover">
+                            <img
+                                 src="images/shop-img-1x-05-hover.jpg"
+                                 alt="Bata Bordada"
+                                 srcset="images/shop-img-2x-05-hover.jpg 2x,
+                                         images/shop-img-1x-05-hover.jpg 1x"
+                                 class="hide"
+                            />
+                        </div>
+                    </div>
+                    <h3>Bata Bordada</h3>
+                    <div class="product-infos">
+                        <p class="valor">
+                            <span class="price"><span class="amount">R$ 398</span></span>
+                            <span class="pay">até 5x de R$30,00</span>
+                        </p>
+                        <i></i>
+                    </div>
+                </div>
+                <div class="product">
+                    <a href="#" class="product-link"></a>
+                    <div class="product-image">
+                        <img
+                             src="images/shop-img-1x-04.jpg"
+                             alt="Bata Bordada"
+                             srcset="images/shop-img-2x-04.jpg 2x,
+                                     images/shop-img-1x-04.jpg 1x"
+                             class="show"
+                        />
+                        <div class="product-image-hover">
+                            <img
+                                 src="images/shop-img-1x-04-hover.jpg"
+                                 alt="Bata Bordada"
+                                 srcset="images/shop-img-2x-04-hover.jpg 2x,
+                                         images/shop-img-1x-04-hover.jpg 1x"
+                                 class="hide"
+                            />
+                        </div>
+                    </div>
+                    <h3>Chapéu de praia com fivela</h3>
+                    <div class="product-infos">
+                        <p class="valor">
+                            <span class="price"><del><span class="amount">R$ 398</span></del><ins><span class="amount">R$ 398</span></ins></span>
+                            <span class="pay">até 5x de R$30,00</span>
+                        </p>
+                        <i></i>
+                    </div>
+                </div>
+                <div class="product">
+                    <a href="#" class="product-link"></a>
+                    <div class="product-image">
+                        <img
+                             src="images/shop-img-1x-03.jpg"
+                             alt="Bata Bordada"
+                             srcset="images/shop-img-2x-03.jpg 2x,
+                                     images/shop-img-1x-03.jpg 1x"
+                             class="show"
+                        />
+                        <div class="product-image-hover">
+                            <img
+                                 src="images/shop-img-1x-03-hover.jpg"
+                                 alt="Bata Bordada"
+                                 srcset="images/shop-img-2x-03-hover.jpg 2x,
+                                         images/shop-img-1x-03-hover.jpg 1x"
+                                 class="hide"
+                            />
+                        </div>
+                    </div>
+                    <h3>Bata Bordada</h3>
+                    <div class="product-infos">
+                        <p class="valor">
+                            <span class="price"><span class="amount">R$ 398</span></span>
+                            <span class="pay">até 5x de R$30,00</span>
+                        </p>
+                        <i></i>
+                    </div>
+                </div>
+                <div class="product">
+                    <a href="#" class="product-link"></a>
+                    <div class="product-image">
+                        <img
+                             src="images/shop-img-1x-02.jpg"
+                             alt="Bata Bordada"
+                             srcset="images/shop-img-2x-02.jpg 2x,
+                                     images/shop-img-1x-02.jpg 1x"
+                             class="show"
+                        />
+                        <div class="product-image-hover">
+                            <img
+                                 src="images/shop-img-1x-02-hover.jpg"
+                                 alt="Bata Bordada"
+                                 srcset="images/shop-img-2x-02-hover.jpg 2x,
+                                         images/shop-img-1x-02-hover.jpg 1x"
+                                 class="hide"
+                            />
+                        </div>
+                    </div>
+                    <h3>Bata Bordada</h3>
+                    <div class="product-infos">
+                        <p class="valor">
+                            <span class="price"><del><span class="amount">R$ 398</span></del><ins><span class="amount">R$ 398</span></ins></span>
+                            <span class="pay">até 5x de R$30,00</span>
+                        </p>
+                        <i></i>
+                    </div>
+                </div>
+                <div class="product">
+                    <a href="#" class="product-link"></a>
+                    <div class="product-image">
+                        <img
+                             src="images/shop-img-1x-01.jpg"
+                             alt="Bata Bordada"
+                             srcset="images/shop-img-2x-01.jpg 2x,
+                                     images/shop-img-1x-01.jpg 1x"
+                             class="show"
+                        />
+                        <div class="product-image-hover">
+                            <img
+                                 src="images/shop-img-1x-01-hover.jpg"
+                                 alt="Bata Bordada"
+                                 srcset="images/shop-img-2x-01-hover.jpg 2x,
+                                         images/shop-img-1x-01-hover.jpg 1x"
+                                 class="hide"
+                            />
+                        </div>
+                    </div>
+                    <h3>Bata Bordada</h3>
+                    <div class="product-infos">
+                        <p class="valor">
+                            <span class="price"><del><span class="amount">R$ 398</span></del><ins><span class="amount">R$ 398</span></ins></span>
+                            <span class="pay">até 5x de R$30,00</span>
+                        </p>
+                        <i></i>
+                    </div>
+                </div>
+                <div class="load-more">
+                    <a href="javascript:void();">Carregar mais</a>
+                </div>
+            </div>
+        </section>
+    </main>
+    <footer class="container">
+        <p>Profite - CNPJ 05.559.134/0001-60 End: Voluntários da Pátria, 301/702 Botafogo - RJ - 22270-000</p>
+    </footer>
+</body>
+<script>
+    
+    alturaheader = $( "body > header" ).outerHeight();
+    $( "body > main" ).css({"margin-top" : alturaheader});
+    
+    
+    
+    $( ".filter-container-hidden" ).hide();
+    
+    $( ".filter-btn-show" ).click(function(e) {
+        $(this).parent().find(".filter-container-hidden").slideToggle();
+    });
+    
+    $( "label.checkbox" ).click(function(e) {
+        e.stopPropagation();
+        $(this).toggleClass("active");
+    });
+    $( ":checkbox" ).click(function(e) {
+        e.stopPropagation();
+    });
+    
+    $( "li.tag-item" ).click(function(e) {
+        e.stopPropagation();
+        $(this).toggleClass("active");
+    });
+    
+</script>
+</html>

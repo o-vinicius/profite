@@ -1,0 +1,468 @@
+* {
+    box-sizing: border-box;
+}
+*:focus {
+    outline: none!important;
+}
+
+body {
+    font-family: 'Open Sans', sans-serif;
+    font-size: 14px;
+    margin: 0;
+    padding: 0;
+}
+img {
+    max-width: 100%;
+}
+h1,
+h2,
+h3,
+h4 {
+    font-family: 'Ubuntu Mono', monospace;
+    text-transform: uppercase;
+    font-weight: 400;
+}
+
+
+.container {
+    width: 100%;
+    padding-left: 20px;
+    padding-right: 20px;
+}
+
+.filter-type > h3 {
+    font-size: 20px;
+}
+
+.filter-checkbox label {
+    display: block;
+    cursor: pointer;
+    line-height: 16px;
+    margin-bottom: 9px;
+}
+.filter-checkbox label input {
+    display: none;
+}
+.filter-checkbox label::before {
+    content: '';
+    display: inline-block;
+    padding: 0;
+    width: 15px;
+    height: 15px;
+    margin: 0 7px 0 0;
+    border: 1px solid #d8d8d8;
+    box-shadow: inset 0 0 0 2px #fff;
+    vertical-align: top;
+    transition: all 0.3s ease;
+}
+.filter-checkbox label:hover::before {
+    border: 1px solid #ff9f1c;
+}
+.filter-checkbox label.active::before {
+    background-color: #ff9f1c;
+}
+
+.filter-tag ul.tag-list {
+    padding: 0;
+    margin: 0;
+    font-size: 0;
+}
+.filter-tag ul.tag-list li.tag-item {
+    display: inline-block;
+    margin: 0 10px 10px 0;
+}
+.filter-tag ul.tag-list li.tag-item a {
+    display: inline-block;
+    font-size: 12px;
+    text-align: center;
+    width: 32px;
+    height: 32px;
+    line-height: 32px;
+    border: 1px solid #e5e5e5;
+    text-decoration: none;
+    color: #7f7f7f;
+    transition: all 0.3s ease;
+}
+.filter-tag ul.tag-list li.tag-item a:hover {
+    border-color: #ff9f1c;
+    color: #000;
+}
+.filter-tag ul.tag-list li.tag-item.active a {
+    background-color: #ff9f1c;
+    box-shadow: inset 0 0 0 2px #fff;
+    color: #fff;
+}
+
+.filter-btn-show {
+    font-size: 12px;
+    color: #000;
+    opacity: 0.6;
+    transition: opacity 0.3s ease;
+    text-decoration: none;
+    border-bottom: 1px solid #666;
+}
+.filter-btn-show i {
+    display: inline-block;
+    width: 8px;
+    height: 8px;
+    background: url(../images/icon-arrow-down.png) no-repeat center center;
+    background-size: 8px;
+}
+.filter-btn-show:hover {
+    opacity: 1;
+}
+
+/* HEADER */
+body > header {
+    position: fixed;
+    top: 0;
+    left: 0;
+    z-index: 99;
+    width: 100%;
+    border-bottom: 2px solid #ff9f1c;
+    padding: 20px 0;
+    background-color: #fff;
+}
+body > header .container {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+body > header .container h1.logo {
+    font-size: 0;
+    margin: 0;
+}
+body > header .container .cart-infos a.cart-contents {
+    position: relative;
+    display: inline-block;
+    padding: 10px;
+}
+body > header .container .cart-infos a.cart-contents i {
+    display: inline-block;
+    width: 17px;
+    height: 20px;
+    background-image: url(../images/icon-bag.png);
+    background-repeat: no-repeat;
+    background-position: center center;
+    background-size: 17px;
+}
+body > header .container .cart-infos a.cart-contents span.cart-count {
+    position: absolute;
+    top: 17px;
+    right: -4px;
+    display: block;
+    width: 18px;
+    height: 18px;
+    line-height: 18px;
+    border-radius: 18px;
+    background-color: #ff9f1c;
+    font-size: 12px;
+    color: #fff;
+    text-align: center;
+}
+
+
+
+/* MAIN */
+/* MAIN - HEADER */
+body > main > header {
+    padding-top: 30px;
+    padding-bottom: 30px;
+    
+}
+body > main > header::after {
+    content: '';
+    display: table;
+    clear: both;
+}
+body > main > header h2 {
+    font-size: 30px;
+    line-height: 1em;
+    margin: 0;
+}
+
+/* PRODUCTS */
+body > main > .products-list .col-filters {
+    display: none;
+}
+
+body > main > .products-list .col-products {
+    display: flex;
+    flex-wrap: wrap;
+}
+.product {
+    position: relative;
+    margin-bottom: 50px;
+    padding-bottom: 55px;
+    transition: color 0.5s ease;
+}
+.product::before {
+    content: '';
+    display: block;
+    position: absolute;
+    top: -5px;
+    left: -5px;
+    z-index: -1;
+    width: calc(100% + 10px);
+    height: calc(100% + 10px);
+    transition: all 0.7s ease-in-out;
+}
+.product:hover::before {
+    background-color: #ff9f1c;
+}
+.product .product-link {
+    position: absolute;
+    top: 0;
+    left: 0;
+    z-index: 3;
+    width: 100%;
+    height: 100%;
+}
+.product .product-image {
+    position: relative;
+    overflow: hidden;
+    font-size: 0;
+}
+.product .product-image > img {
+    transition: all 0.5s ease-in-out;
+}
+.product .product-image .product-image-hover {
+    position: absolute;
+    top: 0;
+    left: 0;
+    overflow: hidden;
+    opacity: 0;
+    transform: translateY(100%);
+    transition: all 0.5s ease-in-out;
+}
+.product .product-image .product-image-hover img {
+    transform: translateY(-50%);
+    transition: all 0.5s ease-in-out;
+}
+.product:hover {
+    color: #fff;
+}
+.product:hover .product-image .product-image-hover {
+    opacity: 1;
+    transform: translateY(0);
+}
+.product:hover .product-image .product-image-hover img {
+    transform: translateY(0);
+}
+.product > h3,
+.product .product-infos {
+    width: 100%;
+    padding: 0 10px;
+    margin: 0;
+}
+.product > h3 {
+    text-align: center;
+    font-size: 16px;
+    font-weight: 400;
+    margin: 15px 0;
+}
+.product .product-infos {
+    position: absolute;
+    bottom: 15px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+.product .product-infos p {
+    margin: 0 10px 0;
+}
+.product .product-infos p > span {
+    font-family: 'Libre Baskerville', serif;
+    font-size: 12px;
+    text-align: right;
+    display: block;
+    margin-bottom: 4px;
+}
+.product .product-infos p > span:last-child {
+    margin-bottom: 0;
+}
+.product .product-infos p > span.price {
+    text-decoration: none;
+    font-size: 16px;
+    font-weight: 600;
+}
+.product .product-infos p > span.price del  {
+    font-size: 12px;
+    color: #666;
+    margin-right: 5px;
+    font-weight: 400;
+    transition: color 0.5s ease;
+}
+.product:hover .product-infos p > span.price del {
+    color: #fff;
+}
+.product .product-infos p > span.price ins  {
+    text-decoration: none!important;
+}
+.product .product-infos i {
+    width: 52px;
+    height: 34px;
+    background-color: #ff9f1c;
+    background-image: url(../images/icon-cart.png);
+    background-position: center center;
+    background-repeat: no-repeat;
+    background-size: 17px auto;
+}
+
+
+.load-more {
+    width: 100%;
+    text-align: center;
+}
+.load-more a {
+    font-family: 'Ubuntu Mono', monospace;
+    text-transform: uppercase;
+    letter-spacing: 0.15em;
+    padding: 17px 70px;
+    display: inline-block;
+    background-color: #ff9f1c;
+    color: #fff;
+    text-decoration: none;
+    margin-bottom: 50px;
+    box-shadow: 0 0 0 0 #ff9f1c;
+    transition: all 0.3s ease-in-out;
+}
+.load-more a:hover {
+    box-shadow:
+        0 0 0 5px #ff9f1c,
+        5px 0 30px 0 rgba(0,0,0,0.15);
+}
+
+footer {
+    text-align: center;
+    font-size: 12px;
+    background-color: #000;
+    color: #fff;
+    padding-top: 5px;
+    padding-bottom: 5px;
+}
+
+@media screen and (min-width: 375px) {
+}
+@media screen and (min-width: 768px) {
+    body > main > .products-list .col-products .product {
+        width: calc(50% - 20px);
+        margin-left: 10px;
+        margin-right: 10px;
+    }
+}
+@media screen and (min-width: 1024px) {
+    body > main {
+        padding-bottom: 100px;
+    }
+    .container {
+        padding-left: calc(50% - 470px);
+        padding-right: calc(50% - 470px);
+    }
+    
+    .filter-select {
+        background-color: #fff;
+        display: inline-block;
+        position: relative;
+        font-size: 12px;
+        z-index: 9;
+    }
+    .filter-select a {
+        color: #000;
+        text-decoration: none;
+        transition: all 0.3s ease;
+    }
+    .filter-select > a {
+        position: relative;
+        z-index: 2;
+        display: inline-block;
+        border: 1px solid #666;
+        padding: 8px 40px 8px 10px;
+        background-color: #fff;
+        line-height: 1em;
+    }
+    .filter-select:hover > a {
+        background: #eee;
+    }
+    .filter-select > a i {
+        position: absolute;
+        top: 50%;
+        right: 10px;
+        transform: translateY(-50%);
+        width: 9px;
+        height: 9px;
+        background: url(../images/icon-arrow-down.png) no-repeat center center;
+        background-size: 9px auto;
+    }
+    
+    .filter-select ul {
+        background-color: #fff;
+        position: absolute;
+        top: 0;
+        right: 0;
+        z-index: 1;
+        min-width: 100%;
+        border: 1px solid #666;
+        padding: 0;
+        margin: 0;
+        visibility: hidden;
+        opacity: 0;
+        transition: all 0.3s ease;
+    }
+    .filter-select:hover ul {
+        top: calc(100% - 1px);
+        opacity: 1;
+        visibility: visible;
+    }
+    .filter-select ul li {
+        list-style: none;
+        margin: 0 -1px -1px;
+    }
+    .filter-select ul li a {
+        display: block;
+        padding: 7px 10px;
+    }
+    .filter-select ul li a:hover {
+        color: #fff;
+        background-color: #ff9f1c;
+    }
+    
+    
+    body > main > header .nav-menu,
+    body > main > header .nav-filter,
+    body > main > header .nav-wrapper .btn {
+        display: none;
+    }
+    body > main > header > h2 {
+        float: left;
+    }
+    body > main > header > nav {
+        float: right;
+    }
+    
+    body > main > .products-list {
+        display: flex;
+    }
+    body > main > .products-list .col-filters {
+        display: block;
+        width: calc(25% - 20px);
+        padding-right: 40px;
+    }
+    body > main > .products-list .col-products {
+        width: calc(75% + 20px);
+    }
+    body > main > .products-list .col-products .product {
+        width: calc(33.33% - 20px);
+        margin-left: 20px;
+    }
+    body > main > .products-list .col-products .product:nth-of-type(3n) {
+        margin-right: 0;
+    }
+}
+
+
+/* cores 
+
+laranja = #ff9f1c;
+
+*/
