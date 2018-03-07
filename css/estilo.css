@@ -222,6 +222,11 @@ body > main > header .nav-menu a {
     width: 50%;
     display: inline-block;
     border: 1px solid #666;
+    transition: all 0.3s ease;
+}
+body > main > header .nav-menu a:hover {
+    background-color: #ff9f1c;
+    color: #fff;
 }
 
 body > main > header .nav-menu a:last-of-type {
