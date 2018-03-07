@@ -637,9 +637,15 @@ footer {
         width: calc(75% + 20px);
     }
     body > main > .products-list .col-products .product {
+<<<<<<< HEAD
         width: calc(33.33% - 13.33px);
         margin-right: 20px;
         margin-left: 0;
+=======
+        width: calc(33.33% - 20px);
+        margin-left: 20px;
+        margin-right: 0;
+>>>>>>> master
     }
     body > main > .products-list .col-products .product:nth-of-type(3n) {
         margin-right: 0;
